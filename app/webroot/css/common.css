@@ -1,0 +1,825 @@
+
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	width: 100%;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Arial, Helvetica, sans-serif !important;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #f7f7f7;
+	position: relative;
+}
+
+li {
+	list-style: none;
+	font-size: 14px;
+	color: #555;
+}
+
+a {
+	text-decoration: none;
+	font-size: 12px;
+	color: #999;
+}
+
+p {
+	font-size: 12px;
+	color: #999;
+}
+
+img {
+	width: 100%;
+}
+
+
+/* Buttons */
+button {
+	display: block;
+	color: white;
+	font-size: 14px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+}
+
+
+/* Modal */
+#ng-view {
+    position: relative;
+    padding-top: 65px;
+}
+
+table th {
+    width: 33%;
+}
+
+.overlayContainer { display: none;}
+.overlayBackground { top:0px; left:0px; padding-left:100px;position:absolute; z-index:1000;height:100%;width:100%;background-color:#808080;opacity:0.3;}
+.overlayContent { position:absolute; border: 1px solid #000; background-color:#fff; font-weight: bold;height: 100px;width: 300px;z-index:1000;text-align:center;}
+
+/* Modal */
+.modal {
+	width: 500px;
+	margin: 0;
+	padding: 30px 40px;
+	border-radius: 5px;
+	box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+	border: 1px solid rgba(0,0,0,0.3);
+	background: #fff;
+	position: absolute;
+	display: none;
+	z-index: 999;
+}
+
+#overlay {
+	z-index: 998;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 120%;
+	background-color: rgba(255,255,255,0.4);
+}
+
+.modal .close {
+	cursor: pointer;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+}
+
+.modal .title {
+	font-size: 17px;
+}
+
+.modal .button {
+	cursor: pointer;
+}
+
+.modal .button a {
+	padding: 7px 30px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.modal .submit a {
+	background: #4d90fe;
+	border: 1px solid #3079ed;
+	color: white;
+}
+
+.modal .delete a {
+	background: #d14836;
+	border: 1px solid red;
+	color: white;
+}
+
+.modal .border {
+	display: block;
+	border-top: 1px solid #efefef;
+	margin: 20px 0;
+}
+
+.modal form {
+	margin: 40px 0;
+	overflow: hidden;
+}
+
+.modal form div label {
+	font-size: 14px;
+	color: #434a54;
+	display: block;
+}
+
+input[type="text"], textarea, select {
+    border: 1px solid #e1e1e1;
+}
+
+
+/* Icons */
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?pnejdc');
+	src:url('../fonts/icomoon.eot?#iefixpnejdc') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?pnejdc') format('woff'),
+		url('../fonts/icomoon.ttf?pnejdc') format('truetype'),
+		url('../fonts/icomoon.svg?pnejdc#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo:before {
+	content: "\e60e";
+}
+.icon-compass:before {
+	content: "\e600";
+}
+.icon-map:before {
+	content: "\e601";
+}
+.icon-clock:before {
+	content: "\e602";
+}
+.icon-user:before {
+	content: "\e606";
+}
+.icon-earth:before {
+	content: "\e603";
+}
+.icon-star:before {
+	content: "\e609";
+}
+.icon-twitter:before {
+	content: "\e604";
+}
+.icon-search:before {
+	content: "\e60a";
+}
+.icon-checkmark:before {
+	content: "\e60b";
+}
+.icon-cross:before {
+	content: "\e605";
+}
+.icon-minus:before {
+	content: "\e607";
+}
+.icon-plus:before {
+	content: "\e608";
+}
+.icon-arrow-down:before {
+	content: "\e60c";
+}
+.icon-arrow-up:before {
+	content: "\e60d";
+}
+
+
+
+/* Flag(49) Sprite */
+.flag28 {background: url('../img/flag_sprite_28.png') no-repeat top left; display:block; width: 28px; height:19px; }
+.flag28_AD{ background-position: 0 0; width: 28px; height: 19px; } 
+.flag28_AE{ background-position: 0 -20px; width: 28px; height: 19px; } 
+.flag28_AF{ background-position: 0 -40px; width: 28px; height: 19px; } 
+.flag28_AG{ background-position: 0 -60px; width: 28px; height: 19px; } 
+.flag28_AL{ background-position: 0 -80px; width: 28px; height: 19px; } 
+.flag28_AM{ background-position: 0 -100px; width: 28px; height: 19px; } 
+.flag28_AR{ background-position: 0 -120px; width: 28px; height: 19px; } 
+.flag28_AT{ background-position: 0 -140px; width: 28px; height: 19px; } 
+.flag28_AU{ background-position: 0 -160px; width: 28px; height: 19px; } 
+.flag28_AZ{ background-position: 0 -180px; width: 28px; height: 19px; } 
+.flag28_BA{ background-position: 0 -200px; width: 28px; height: 19px; } 
+.flag28_BB{ background-position: 0 -220px; width: 28px; height: 19px; } 
+.flag28_BD{ background-position: 0 -240px; width: 28px; height: 19px; } 
+.flag28_BE{ background-position: 0 -260px; width: 28px; height: 19px; } 
+.flag28_BF{ background-position: 0 -280px; width: 28px; height: 19px; } 
+.flag28_BG{ background-position: 0 -300px; width: 28px; height: 19px; } 
+.flag28_BH{ background-position: 0 -320px; width: 28px; height: 19px; } 
+.flag28_BI{ background-position: 0 -340px; width: 28px; height: 19px; } 
+.flag28_BJ{ background-position: 0 -360px; width: 28px; height: 19px; } 
+.flag28_BN{ background-position: 0 -380px; width: 28px; height: 19px; } 
+.flag28_BO{ background-position: 0 -400px; width: 28px; height: 19px; } 
+.flag28_BR{ background-position: 0 -420px; width: 28px; height: 19px; } 
+.flag28_BS{ background-position: 0 -440px; width: 28px; height: 19px; } 
+.flag28_BT{ background-position: 0 -460px; width: 28px; height: 19px; } 
+.flag28_BW{ background-position: 0 -480px; width: 28px; height: 19px; } 
+.flag28_BY{ background-position: 0 -500px; width: 28px; height: 19px; } 
+.flag28_BZ{ background-position: 0 -520px; width: 28px; height: 19px; } 
+.flag28_CA{ background-position: 0 -540px; width: 28px; height: 19px; } 
+.flag28_CD{ background-position: 0 -560px; width: 28px; height: 19px; } 
+.flag28_CF{ background-position: 0 -580px; width: 28px; height: 19px; } 
+.flag28_CG{ background-position: 0 -600px; width: 28px; height: 19px; } 
+.flag28_CH{ background-position: 0 -620px; width: 28px; height: 19px; } 
+.flag28_CI{ background-position: 0 -640px; width: 28px; height: 19px; } 
+.flag28_CL{ background-position: 0 -660px; width: 28px; height: 19px; } 
+.flag28_CM{ background-position: 0 -680px; width: 28px; height: 19px; } 
+.flag28_CN{ background-position: 0 -700px; width: 28px; height: 19px; } 
+.flag28_CO{ background-position: 0 -720px; width: 28px; height: 19px; } 
+.flag28_CR{ background-position: 0 -740px; width: 28px; height: 19px; } 
+.flag28_CU{ background-position: 0 -760px; width: 28px; height: 19px; } 
+.flag28_CV{ background-position: 0 -780px; width: 28px; height: 19px; } 
+.flag28_CY{ background-position: 0 -800px; width: 28px; height: 19px; } 
+.flag28_CZ{ background-position: 0 -820px; width: 28px; height: 19px; } 
+.flag28_DE{ background-position: 0 -840px; width: 28px; height: 19px; } 
+.flag28_DJ{ background-position: 0 -860px; width: 28px; height: 19px; } 
+.flag28_DK{ background-position: 0 -880px; width: 28px; height: 19px; } 
+.flag28_DM{ background-position: 0 -900px; width: 28px; height: 19px; } 
+.flag28_DO{ background-position: 0 -920px; width: 28px; height: 19px; } 
+.flag28_DZ{ background-position: 0 -940px; width: 28px; height: 19px; } 
+.flag28_EC{ background-position: 0 -960px; width: 28px; height: 19px; } 
+.flag28_EE{ background-position: 0 -980px; width: 28px; height: 19px; } 
+.flag28_EG{ background-position: 0 -1000px; width: 28px; height: 19px; } 
+.flag28_ER{ background-position: 0 -1020px; width: 28px; height: 19px; } 
+.flag28_ES{ background-position: 0 -1040px; width: 28px; height: 19px; } 
+.flag28_ET{ background-position: 0 -1060px; width: 28px; height: 19px; } 
+.flag28_FI{ background-position: 0 -1080px; width: 28px; height: 19px; } 
+.flag28_FJ{ background-position: 0 -1100px; width: 28px; height: 19px; } 
+.flag28_FM{ background-position: 0 -1120px; width: 28px; height: 19px; } 
+.flag28_FR{ background-position: 0 -1140px; width: 28px; height: 19px; } 
+.flag28_GA{ background-position: 0 -1160px; width: 28px; height: 19px; } 
+.flag28_GB{ background-position: 0 -1180px; width: 28px; height: 19px; } 
+.flag28_GD{ background-position: 0 -1200px; width: 28px; height: 19px; } 
+.flag28_GE{ background-position: 0 -1220px; width: 28px; height: 19px; } 
+.flag28_GH{ background-position: 0 -1240px; width: 28px; height: 19px; } 
+.flag28_GM{ background-position: 0 -1260px; width: 28px; height: 19px; } 
+.flag28_GN{ background-position: 0 -1280px; width: 28px; height: 19px; } 
+.flag28_GQ{ background-position: 0 -1300px; width: 28px; height: 19px; } 
+.flag28_GR{ background-position: 0 -1320px; width: 28px; height: 19px; } 
+.flag28_GT{ background-position: 0 -1340px; width: 28px; height: 19px; } 
+.flag28_GW{ background-position: 0 -1360px; width: 28px; height: 19px; } 
+.flag28_GY{ background-position: 0 -1380px; width: 28px; height: 19px; } 
+.flag28_HN{ background-position: 0 -1400px; width: 28px; height: 19px; } 
+.flag28_HR{ background-position: 0 -1420px; width: 28px; height: 19px; } 
+.flag28_HT{ background-position: 0 -1440px; width: 28px; height: 19px; } 
+.flag28_HU{ background-position: 0 -1460px; width: 28px; height: 19px; } 
+.flag28_ID{ background-position: 0 -1480px; width: 28px; height: 19px; } 
+.flag28_IE{ background-position: 0 -1500px; width: 28px; height: 19px; } 
+.flag28_IL{ background-position: 0 -1520px; width: 28px; height: 19px; } 
+.flag28_IN{ background-position: 0 -1540px; width: 28px; height: 19px; } 
+.flag28_IQ{ background-position: 0 -1560px; width: 28px; height: 19px; } 
+.flag28_IR{ background-position: 0 -1580px; width: 28px; height: 19px; } 
+.flag28_IS{ background-position: 0 -1600px; width: 28px; height: 19px; } 
+.flag28_IT{ background-position: 0 -1620px; width: 28px; height: 19px; } 
+.flag28_JM{ background-position: 0 -1640px; width: 28px; height: 19px; } 
+.flag28_JO{ background-position: 0 -1660px; width: 28px; height: 19px; } 
+.flag28_JP{ background-position: 0 -1680px; width: 28px; height: 19px; } 
+.flag28_KE{ background-position: 0 -1700px; width: 28px; height: 19px; } 
+.flag28_KG{ background-position: 0 -1720px; width: 28px; height: 19px; } 
+.flag28_KH{ background-position: 0 -1740px; width: 28px; height: 19px; } 
+.flag28_KI{ background-position: 0 -1760px; width: 28px; height: 19px; } 
+.flag28_KM{ background-position: 0 -1780px; width: 28px; height: 19px; } 
+.flag28_KN{ background-position: 0 -1800px; width: 28px; height: 19px; } 
+.flag28_KO{ background-position: 0 -1820px; width: 28px; height: 19px; } 
+.flag28_KP{ background-position: 0 -1840px; width: 28px; height: 19px; } 
+.flag28_KR{ background-position: 0 -1860px; width: 28px; height: 19px; } 
+.flag28_KW{ background-position: 0 -1880px; width: 28px; height: 19px; } 
+.flag28_KZ{ background-position: 0 -1900px; width: 28px; height: 19px; } 
+.flag28_Kosovo{ background-position: 0 -1920px; width: 28px; height: 19px; } 
+.flag28_LA{ background-position: 0 -1940px; width: 28px; height: 19px; } 
+.flag28_LB{ background-position: 0 -1960px; width: 28px; height: 19px; } 
+.flag28_LC{ background-position: 0 -1980px; width: 28px; height: 19px; } 
+.flag28_LI{ background-position: -30px 0; width: 28px; height: 19px; } 
+.flag28_LK{ background-position: -30px -20px; width: 28px; height: 19px; } 
+.flag28_LR{ background-position: -30px -40px; width: 28px; height: 19px; } 
+.flag28_LS{ background-position: -30px -60px; width: 28px; height: 19px; } 
+.flag28_LT{ background-position: -30px -80px; width: 28px; height: 19px; } 
+.flag28_LU{ background-position: -30px -100px; width: 28px; height: 19px; } 
+.flag28_LV{ background-position: -30px -120px; width: 28px; height: 19px; } 
+.flag28_LY{ background-position: -30px -140px; width: 28px; height: 19px; } 
+.flag28_MA{ background-position: -30px -160px; width: 28px; height: 19px; } 
+.flag28_MC{ background-position: -30px -180px; width: 28px; height: 19px; } 
+.flag28_MD{ background-position: -30px -200px; width: 28px; height: 19px; } 
+.flag28_ME{ background-position: -30px -220px; width: 28px; height: 19px; } 
+.flag28_MG{ background-position: -30px -240px; width: 28px; height: 19px; } 
+.flag28_MH{ background-position: -30px -260px; width: 28px; height: 19px; } 
+.flag28_MK{ background-position: -30px -280px; width: 28px; height: 19px; } 
+.flag28_ML{ background-position: -30px -300px; width: 28px; height: 19px; } 
+.flag28_MM{ background-position: -30px -320px; width: 28px; height: 19px; } 
+.flag28_MN{ background-position: -30px -340px; width: 28px; height: 19px; } 
+.flag28_MR{ background-position: -30px -360px; width: 28px; height: 19px; } 
+.flag28_MT{ background-position: -30px -380px; width: 28px; height: 19px; } 
+.flag28_MU{ background-position: -30px -400px; width: 28px; height: 19px; } 
+.flag28_MV{ background-position: -30px -420px; width: 28px; height: 19px; } 
+.flag28_MW{ background-position: -30px -440px; width: 28px; height: 19px; } 
+.flag28_MX{ background-position: -30px -460px; width: 28px; height: 19px; } 
+.flag28_MY{ background-position: -30px -480px; width: 28px; height: 19px; } 
+.flag28_MZ{ background-position: -30px -500px; width: 28px; height: 19px; } 
+.flag28_NA{ background-position: -30px -520px; width: 28px; height: 19px; } 
+.flag28_NE{ background-position: -30px -540px; width: 28px; height: 19px; } 
+.flag28_NG{ background-position: -30px -560px; width: 28px; height: 19px; } 
+.flag28_NI{ background-position: -30px -580px; width: 28px; height: 19px; } 
+.flag28_NL{ background-position: -30px -600px; width: 28px; height: 19px; } 
+.flag28_NO{ background-position: -30px -620px; width: 28px; height: 19px; } 
+.flag28_NP{ background-position: -30px -640px; width: 28px; height: 19px; } 
+.flag28_NR{ background-position: -30px -660px; width: 28px; height: 19px; } 
+.flag28_NZ{ background-position: -30px -680px; width: 28px; height: 19px; } 
+.flag28_OM{ background-position: -30px -700px; width: 28px; height: 19px; } 
+.flag28_PA{ background-position: -30px -720px; width: 28px; height: 19px; } 
+.flag28_PE{ background-position: -30px -740px; width: 28px; height: 19px; } 
+.flag28_PG{ background-position: -30px -760px; width: 28px; height: 19px; } 
+.flag28_PH{ background-position: -30px -780px; width: 28px; height: 19px; } 
+.flag28_PK{ background-position: -30px -800px; width: 28px; height: 19px; } 
+.flag28_PL{ background-position: -30px -820px; width: 28px; height: 19px; } 
+.flag28_PT{ background-position: -30px -840px; width: 28px; height: 19px; } 
+.flag28_PW{ background-position: -30px -860px; width: 28px; height: 19px; } 
+.flag28_PY{ background-position: -30px -880px; width: 28px; height: 19px; } 
+.flag28_QA{ background-position: -30px -900px; width: 28px; height: 19px; } 
+.flag28_RO{ background-position: -30px -920px; width: 28px; height: 19px; } 
+.flag28_RS{ background-position: -30px -940px; width: 28px; height: 19px; } 
+.flag28_RU{ background-position: -30px -960px; width: 28px; height: 19px; } 
+.flag28_RW{ background-position: -30px -980px; width: 28px; height: 19px; } 
+.flag28_SA{ background-position: -30px -1000px; width: 28px; height: 19px; } 
+.flag28_SB{ background-position: -30px -1020px; width: 28px; height: 19px; } 
+.flag28_SC{ background-position: -30px -1040px; width: 28px; height: 19px; } 
+.flag28_SD{ background-position: -30px -1060px; width: 28px; height: 19px; } 
+.flag28_SE{ background-position: -30px -1080px; width: 28px; height: 19px; } 
+.flag28_SG{ background-position: -30px -1100px; width: 28px; height: 19px; } 
+.flag28_SI{ background-position: -30px -1120px; width: 28px; height: 19px; } 
+.flag28_SK{ background-position: -30px -1140px; width: 28px; height: 19px; } 
+.flag28_SL{ background-position: -30px -1160px; width: 28px; height: 19px; } 
+.flag28_SM{ background-position: -30px -1180px; width: 28px; height: 19px; } 
+.flag28_SN{ background-position: -30px -1200px; width: 28px; height: 19px; } 
+.flag28_SO{ background-position: -30px -1220px; width: 28px; height: 19px; } 
+.flag28_SR{ background-position: -30px -1240px; width: 28px; height: 19px; } 
+.flag28_SS{ background-position: -30px -1260px; width: 28px; height: 19px; } 
+.flag28_ST{ background-position: -30px -1280px; width: 28px; height: 19px; } 
+.flag28_SV{ background-position: -30px -1300px; width: 28px; height: 19px; } 
+.flag28_SY{ background-position: -30px -1320px; width: 28px; height: 19px; } 
+.flag28_SZ{ background-position: -30px -1340px; width: 28px; height: 19px; } 
+.flag28_TD{ background-position: -30px -1360px; width: 28px; height: 19px; } 
+.flag28_TG{ background-position: -30px -1380px; width: 28px; height: 19px; } 
+.flag28_TH{ background-position: -30px -1400px; width: 28px; height: 19px; } 
+.flag28_TJ{ background-position: -30px -1420px; width: 28px; height: 19px; } 
+.flag28_TL{ background-position: -30px -1440px; width: 28px; height: 19px; } 
+.flag28_TM{ background-position: -30px -1460px; width: 28px; height: 19px; } 
+.flag28_TN{ background-position: -30px -1480px; width: 28px; height: 19px; } 
+.flag28_TO{ background-position: -30px -1500px; width: 28px; height: 19px; } 
+.flag28_TR{ background-position: -30px -1520px; width: 28px; height: 19px; } 
+.flag28_TT{ background-position: -30px -1540px; width: 28px; height: 19px; } 
+.flag28_TV{ background-position: -30px -1560px; width: 28px; height: 19px; } 
+.flag28_TW{ background-position: -30px -1580px; width: 28px; height: 19px; } 
+.flag28_TZ{ background-position: -30px -1600px; width: 28px; height: 19px; } 
+.flag28_UA{ background-position: -30px -1620px; width: 28px; height: 19px; } 
+.flag28_UG{ background-position: -30px -1640px; width: 28px; height: 19px; } 
+.flag28_US{ background-position: -30px -1660px; width: 28px; height: 19px; } 
+.flag28_UY{ background-position: -30px -1680px; width: 28px; height: 19px; } 
+.flag28_UZ{ background-position: -30px -1700px; width: 28px; height: 19px; } 
+.flag28_VA{ background-position: -30px -1720px; width: 28px; height: 19px; } 
+.flag28_VC{ background-position: -30px -1740px; width: 28px; height: 19px; } 
+.flag28_VE{ background-position: -30px -1760px; width: 28px; height: 19px; } 
+.flag28_VN{ background-position: -30px -1780px; width: 28px; height: 19px; } 
+.flag28_VU{ background-position: -30px -1800px; width: 28px; height: 19px; } 
+.flag28_WS{ background-position: -30px -1820px; width: 28px; height: 19px; } 
+.flag28_YE{ background-position: -30px -1840px; width: 28px; height: 19px; } 
+.flag28_ZA{ background-position: -30px -1860px; width: 28px; height: 19px; } 
+.flag28_ZM{ background-position: -30px -1880px; width: 28px; height: 19px; } 
+.flag28_ZW{ background-position: -30px -1900px; width: 28px; height: 19px; } 
+
+
+
+/* Flag(49) Sprite */
+.flag49 {background: url('../img/flag_sprite_49.png') no-repeat top left; display:block; width: 49px; height:33px; }
+.flag49_AD{ background-position: 0 0; width: 49px; height: 33px; } 
+.flag49_AE{ background-position: 0 -40px; width: 49px; height: 33px; } 
+.flag49_AF{ background-position: 0 -80px; width: 49px; height: 33px; } 
+.flag49_AG{ background-position: 0 -120px; width: 49px; height: 33px; } 
+.flag49_AL{ background-position: 0 -160px; width: 49px; height: 33px; } 
+.flag49_AM{ background-position: 0 -200px; width: 49px; height: 33px; } 
+.flag49_AR{ background-position: 0 -240px; width: 49px; height: 33px; } 
+.flag49_AT{ background-position: 0 -280px; width: 49px; height: 33px; } 
+.flag49_AU{ background-position: 0 -320px; width: 49px; height: 33px; } 
+.flag49_AZ{ background-position: 0 -360px; width: 49px; height: 33px; } 
+.flag49_BA{ background-position: 0 -400px; width: 49px; height: 33px; } 
+.flag49_BB{ background-position: 0 -440px; width: 49px; height: 33px; } 
+.flag49_BD{ background-position: 0 -480px; width: 49px; height: 33px; } 
+.flag49_BE{ background-position: 0 -520px; width: 49px; height: 33px; } 
+.flag49_BF{ background-position: 0 -560px; width: 49px; height: 33px; } 
+.flag49_BG{ background-position: 0 -600px; width: 49px; height: 33px; } 
+.flag49_BH{ background-position: 0 -640px; width: 49px; height: 33px; } 
+.flag49_BI{ background-position: 0 -680px; width: 49px; height: 33px; } 
+.flag49_BJ{ background-position: 0 -720px; width: 49px; height: 33px; } 
+.flag49_BN{ background-position: 0 -760px; width: 49px; height: 33px; } 
+.flag49_BO{ background-position: 0 -800px; width: 49px; height: 33px; } 
+.flag49_BR{ background-position: 0 -840px; width: 49px; height: 33px; } 
+.flag49_BS{ background-position: 0 -880px; width: 49px; height: 33px; } 
+.flag49_BT{ background-position: 0 -920px; width: 49px; height: 33px; } 
+.flag49_BW{ background-position: 0 -960px; width: 49px; height: 33px; } 
+.flag49_BY{ background-position: 0 -1000px; width: 49px; height: 33px; } 
+.flag49_BZ{ background-position: 0 -1040px; width: 49px; height: 33px; } 
+.flag49_CA{ background-position: 0 -1080px; width: 49px; height: 33px; } 
+.flag49_CD{ background-position: 0 -1120px; width: 49px; height: 33px; } 
+.flag49_CF{ background-position: 0 -1160px; width: 49px; height: 33px; } 
+.flag49_CG{ background-position: 0 -1200px; width: 49px; height: 33px; } 
+.flag49_CH{ background-position: 0 -1240px; width: 49px; height: 33px; } 
+.flag49_CI{ background-position: 0 -1280px; width: 49px; height: 33px; } 
+.flag49_CL{ background-position: 0 -1320px; width: 49px; height: 33px; } 
+.flag49_CM{ background-position: 0 -1360px; width: 49px; height: 33px; } 
+.flag49_CN{ background-position: 0 -1400px; width: 49px; height: 33px; } 
+.flag49_CO{ background-position: 0 -1440px; width: 49px; height: 33px; } 
+.flag49_CR{ background-position: 0 -1480px; width: 49px; height: 33px; } 
+.flag49_CU{ background-position: 0 -1520px; width: 49px; height: 33px; } 
+.flag49_CV{ background-position: 0 -1560px; width: 49px; height: 33px; } 
+.flag49_CY{ background-position: 0 -1600px; width: 49px; height: 33px; } 
+.flag49_CZ{ background-position: 0 -1640px; width: 49px; height: 33px; } 
+.flag49_DE{ background-position: 0 -1680px; width: 49px; height: 33px; } 
+.flag49_DJ{ background-position: 0 -1720px; width: 49px; height: 33px; } 
+.flag49_DK{ background-position: 0 -1760px; width: 49px; height: 33px; } 
+.flag49_DM{ background-position: 0 -1800px; width: 49px; height: 33px; } 
+.flag49_DO{ background-position: 0 -1840px; width: 49px; height: 33px; } 
+.flag49_DZ{ background-position: 0 -1880px; width: 49px; height: 33px; } 
+.flag49_EC{ background-position: 0 -1920px; width: 49px; height: 33px; } 
+.flag49_EE{ background-position: 0 -1960px; width: 49px; height: 33px; } 
+.flag49_EG{ background-position: -50px 0; width: 49px; height: 33px; } 
+.flag49_ER{ background-position: -50px -40px; width: 49px; height: 33px; } 
+.flag49_ES{ background-position: -50px -80px; width: 49px; height: 33px; } 
+.flag49_ET{ background-position: -50px -120px; width: 49px; height: 33px; } 
+.flag49_FI{ background-position: -50px -160px; width: 49px; height: 33px; } 
+.flag49_FJ{ background-position: -50px -200px; width: 49px; height: 33px; } 
+.flag49_FM{ background-position: -50px -240px; width: 49px; height: 33px; } 
+.flag49_FR{ background-position: -50px -280px; width: 49px; height: 33px; } 
+.flag49_GA{ background-position: -50px -320px; width: 49px; height: 33px; } 
+.flag49_GB{ background-position: -50px -360px; width: 49px; height: 33px; } 
+.flag49_GD{ background-position: -50px -400px; width: 49px; height: 33px; } 
+.flag49_GE{ background-position: -50px -440px; width: 49px; height: 33px; } 
+.flag49_GH{ background-position: -50px -480px; width: 49px; height: 33px; } 
+.flag49_GM{ background-position: -50px -520px; width: 49px; height: 33px; } 
+.flag49_GN{ background-position: -50px -560px; width: 49px; height: 33px; } 
+.flag49_GQ{ background-position: -50px -600px; width: 49px; height: 33px; } 
+.flag49_GR{ background-position: -50px -640px; width: 49px; height: 33px; } 
+.flag49_GT{ background-position: -50px -680px; width: 49px; height: 33px; } 
+.flag49_GW{ background-position: -50px -720px; width: 49px; height: 33px; } 
+.flag49_GY{ background-position: -50px -760px; width: 49px; height: 33px; } 
+.flag49_HN{ background-position: -50px -800px; width: 49px; height: 33px; } 
+.flag49_HR{ background-position: -50px -840px; width: 49px; height: 33px; } 
+.flag49_HT{ background-position: -50px -880px; width: 49px; height: 33px; } 
+.flag49_HU{ background-position: -50px -920px; width: 49px; height: 33px; } 
+.flag49_ID{ background-position: -50px -960px; width: 49px; height: 33px; } 
+.flag49_IE{ background-position: -50px -1000px; width: 49px; height: 33px; } 
+.flag49_IL{ background-position: -50px -1040px; width: 49px; height: 33px; } 
+.flag49_IN{ background-position: -50px -1080px; width: 49px; height: 33px; } 
+.flag49_IQ{ background-position: -50px -1120px; width: 49px; height: 33px; } 
+.flag49_IR{ background-position: -50px -1160px; width: 49px; height: 33px; } 
+.flag49_IS{ background-position: -50px -1200px; width: 49px; height: 33px; } 
+.flag49_IT{ background-position: -50px -1240px; width: 49px; height: 33px; } 
+.flag49_JM{ background-position: -50px -1280px; width: 49px; height: 33px; } 
+.flag49_JO{ background-position: -50px -1320px; width: 49px; height: 33px; } 
+.flag49_JP{ background-position: -50px -1360px; width: 49px; height: 33px; } 
+.flag49_KE{ background-position: -50px -1400px; width: 49px; height: 33px; } 
+.flag49_KG{ background-position: -50px -1440px; width: 49px; height: 33px; } 
+.flag49_KH{ background-position: -50px -1480px; width: 49px; height: 33px; } 
+.flag49_KI{ background-position: -50px -1520px; width: 49px; height: 33px; } 
+.flag49_KM{ background-position: -50px -1560px; width: 49px; height: 33px; } 
+.flag49_KN{ background-position: -50px -1600px; width: 49px; height: 33px; } 
+.flag49_KO{ background-position: -50px -1640px; width: 49px; height: 33px; } 
+.flag49_KP{ background-position: -50px -1680px; width: 49px; height: 33px; } 
+.flag49_KR{ background-position: -50px -1720px; width: 49px; height: 33px; } 
+.flag49_KW{ background-position: -50px -1760px; width: 49px; height: 33px; } 
+.flag49_KZ{ background-position: -50px -1800px; width: 49px; height: 33px; } 
+.flag49_Kosovo{ background-position: -50px -1840px; width: 49px; height: 33px; } 
+.flag49_LA{ background-position: -50px -1880px; width: 49px; height: 33px; } 
+.flag49_LB{ background-position: -50px -1920px; width: 49px; height: 33px; } 
+.flag49_LC{ background-position: -50px -1960px; width: 49px; height: 33px; } 
+.flag49_LI{ background-position: -100px 0; width: 49px; height: 33px; } 
+.flag49_LK{ background-position: -100px -40px; width: 49px; height: 33px; } 
+.flag49_LR{ background-position: -100px -80px; width: 49px; height: 33px; } 
+.flag49_LS{ background-position: -100px -120px; width: 49px; height: 33px; } 
+.flag49_LT{ background-position: -100px -160px; width: 49px; height: 33px; } 
+.flag49_LU{ background-position: -100px -200px; width: 49px; height: 33px; } 
+.flag49_LV{ background-position: -100px -240px; width: 49px; height: 33px; } 
+.flag49_LY{ background-position: -100px -280px; width: 49px; height: 33px; } 
+.flag49_MA{ background-position: -100px -320px; width: 49px; height: 33px; } 
+.flag49_MC{ background-position: -100px -360px; width: 49px; height: 33px; } 
+.flag49_MD{ background-position: -100px -400px; width: 49px; height: 33px; } 
+.flag49_ME{ background-position: -100px -440px; width: 49px; height: 33px; } 
+.flag49_MG{ background-position: -100px -480px; width: 49px; height: 33px; } 
+.flag49_MH{ background-position: -100px -520px; width: 49px; height: 33px; } 
+.flag49_MK{ background-position: -100px -560px; width: 49px; height: 33px; } 
+.flag49_ML{ background-position: -100px -600px; width: 49px; height: 33px; } 
+.flag49_MM{ background-position: -100px -640px; width: 49px; height: 33px; } 
+.flag49_MN{ background-position: -100px -680px; width: 49px; height: 33px; } 
+.flag49_MR{ background-position: -100px -720px; width: 49px; height: 33px; } 
+.flag49_MT{ background-position: -100px -760px; width: 49px; height: 33px; } 
+.flag49_MU{ background-position: -100px -800px; width: 49px; height: 33px; } 
+.flag49_MV{ background-position: -100px -840px; width: 49px; height: 33px; } 
+.flag49_MW{ background-position: -100px -880px; width: 49px; height: 33px; } 
+.flag49_MX{ background-position: -100px -920px; width: 49px; height: 33px; } 
+.flag49_MY{ background-position: -100px -960px; width: 49px; height: 33px; } 
+.flag49_MZ{ background-position: -100px -1000px; width: 49px; height: 33px; } 
+.flag49_NA{ background-position: -100px -1040px; width: 49px; height: 33px; } 
+.flag49_NE{ background-position: -100px -1080px; width: 49px; height: 33px; } 
+.flag49_NG{ background-position: -100px -1120px; width: 49px; height: 33px; } 
+.flag49_NI{ background-position: -100px -1160px; width: 49px; height: 33px; } 
+.flag49_NL{ background-position: -100px -1200px; width: 49px; height: 33px; } 
+.flag49_NO{ background-position: -100px -1240px; width: 49px; height: 33px; } 
+.flag49_NP{ background-position: -100px -1280px; width: 49px; height: 33px; } 
+.flag49_NR{ background-position: -100px -1320px; width: 49px; height: 33px; } 
+.flag49_NZ{ background-position: -100px -1360px; width: 49px; height: 33px; } 
+.flag49_OM{ background-position: -100px -1400px; width: 49px; height: 33px; } 
+.flag49_PA{ background-position: -100px -1440px; width: 49px; height: 33px; } 
+.flag49_PE{ background-position: -100px -1480px; width: 49px; height: 33px; } 
+.flag49_PG{ background-position: -100px -1520px; width: 49px; height: 33px; } 
+.flag49_PH{ background-position: -100px -1560px; width: 49px; height: 33px; } 
+.flag49_PK{ background-position: -100px -1600px; width: 49px; height: 33px; } 
+.flag49_PL{ background-position: -100px -1640px; width: 49px; height: 33px; } 
+.flag49_PT{ background-position: -100px -1680px; width: 49px; height: 33px; } 
+.flag49_PW{ background-position: -100px -1720px; width: 49px; height: 33px; } 
+.flag49_PY{ background-position: -100px -1760px; width: 49px; height: 33px; } 
+.flag49_QA{ background-position: -100px -1800px; width: 49px; height: 33px; } 
+.flag49_RO{ background-position: -100px -1840px; width: 49px; height: 33px; } 
+.flag49_RS{ background-position: -100px -1880px; width: 49px; height: 33px; } 
+.flag49_RU{ background-position: -100px -1920px; width: 49px; height: 33px; } 
+.flag49_RW{ background-position: -100px -1960px; width: 49px; height: 33px; } 
+.flag49_SA{ background-position: -150px 0; width: 49px; height: 33px; } 
+.flag49_SB{ background-position: -150px -40px; width: 49px; height: 33px; } 
+.flag49_SC{ background-position: -150px -80px; width: 49px; height: 33px; } 
+.flag49_SD{ background-position: -150px -120px; width: 49px; height: 33px; } 
+.flag49_SE{ background-position: -150px -160px; width: 49px; height: 33px; } 
+.flag49_SG{ background-position: -150px -200px; width: 49px; height: 33px; } 
+.flag49_SI{ background-position: -150px -240px; width: 49px; height: 33px; } 
+.flag49_SK{ background-position: -150px -280px; width: 49px; height: 33px; } 
+.flag49_SL{ background-position: -150px -320px; width: 49px; height: 33px; } 
+.flag49_SM{ background-position: -150px -360px; width: 49px; height: 33px; } 
+.flag49_SN{ background-position: -150px -400px; width: 49px; height: 33px; } 
+.flag49_SO{ background-position: -150px -440px; width: 49px; height: 33px; } 
+.flag49_SR{ background-position: -150px -480px; width: 49px; height: 33px; } 
+.flag49_SS{ background-position: -150px -520px; width: 49px; height: 33px; } 
+.flag49_ST{ background-position: -150px -560px; width: 49px; height: 33px; } 
+.flag49_SV{ background-position: -150px -600px; width: 49px; height: 33px; } 
+.flag49_SY{ background-position: -150px -640px; width: 49px; height: 33px; } 
+.flag49_SZ{ background-position: -150px -680px; width: 49px; height: 33px; } 
+.flag49_TD{ background-position: -150px -720px; width: 49px; height: 33px; } 
+.flag49_TG{ background-position: -150px -760px; width: 49px; height: 33px; } 
+.flag49_TH{ background-position: -150px -800px; width: 49px; height: 33px; } 
+.flag49_TJ{ background-position: -150px -840px; width: 49px; height: 33px; } 
+.flag49_TL{ background-position: -150px -880px; width: 49px; height: 33px; } 
+.flag49_TM{ background-position: -150px -920px; width: 49px; height: 33px; } 
+.flag49_TN{ background-position: -150px -960px; width: 49px; height: 33px; } 
+.flag49_TO{ background-position: -150px -1000px; width: 49px; height: 33px; } 
+.flag49_TR{ background-position: -150px -1040px; width: 49px; height: 33px; } 
+.flag49_TT{ background-position: -150px -1080px; width: 49px; height: 33px; } 
+.flag49_TV{ background-position: -150px -1120px; width: 49px; height: 33px; } 
+.flag49_TW{ background-position: -150px -1160px; width: 49px; height: 33px; } 
+.flag49_TZ{ background-position: -150px -1200px; width: 49px; height: 33px; } 
+.flag49_UA{ background-position: -150px -1240px; width: 49px; height: 33px; } 
+.flag49_UG{ background-position: -150px -1280px; width: 49px; height: 33px; } 
+.flag49_US{ background-position: -150px -1320px; width: 49px; height: 33px; } 
+.flag49_UY{ background-position: -150px -1360px; width: 49px; height: 33px; } 
+.flag49_UZ{ background-position: -150px -1400px; width: 49px; height: 33px; } 
+.flag49_VA{ background-position: -150px -1440px; width: 49px; height: 33px; } 
+.flag49_VC{ background-position: -150px -1480px; width: 49px; height: 33px; } 
+.flag49_VE{ background-position: -150px -1520px; width: 49px; height: 33px; } 
+.flag49_VN{ background-position: -150px -1560px; width: 49px; height: 33px; } 
+.flag49_VU{ background-position: -150px -1600px; width: 49px; height: 33px; } 
+.flag49_WS{ background-position: -150px -1640px; width: 49px; height: 33px; } 
+.flag49_YE{ background-position: -150px -1680px; width: 49px; height: 33px; } 
+.flag49_ZA{ background-position: -150px -1720px; width: 49px; height: 33px; } 
+.flag49_ZM{ background-position: -150px -1760px; width: 49px; height: 33px; } 
+.flag49_ZW{ background-position: -150px -1800px; width: 49px; height: 33px; } 
+
+
+
+
+/* Flag(70) Sprite */
+.flag70 {background: url('../img/flag_sprite_70.png') no-repeat top left; display:block; width: 70px; height:47px;}
+.flag70_AD{ background-position: 0 0; width: 70px; height: 47px; } 
+.flag70_AE{ background-position: 0 -50px; width: 70px; height: 47px; } 
+.flag70_AF{ background-position: 0 -100px; width: 70px; height: 47px; } 
+.flag70_AG{ background-position: 0 -150px; width: 70px; height: 47px; } 
+.flag70_AL{ background-position: 0 -200px; width: 70px; height: 47px; } 
+.flag70_AM{ background-position: 0 -250px; width: 70px; height: 47px; } 
+.flag70_AR{ background-position: 0 -300px; width: 70px; height: 47px; } 
+.flag70_AT{ background-position: 0 -350px; width: 70px; height: 47px; } 
+.flag70_AU{ background-position: 0 -400px; width: 70px; height: 47px; } 
+.flag70_AZ{ background-position: 0 -450px; width: 70px; height: 47px; } 
+.flag70_BA{ background-position: 0 -500px; width: 70px; height: 47px; } 
+.flag70_BB{ background-position: 0 -550px; width: 70px; height: 47px; } 
+.flag70_BD{ background-position: 0 -600px; width: 70px; height: 47px; } 
+.flag70_BE{ background-position: 0 -650px; width: 70px; height: 47px; } 
+.flag70_BF{ background-position: 0 -700px; width: 70px; height: 47px; } 
+.flag70_BG{ background-position: 0 -750px; width: 70px; height: 47px; } 
+.flag70_BH{ background-position: 0 -800px; width: 70px; height: 47px; } 
+.flag70_BI{ background-position: 0 -850px; width: 70px; height: 47px; } 
+.flag70_BJ{ background-position: 0 -900px; width: 70px; height: 47px; } 
+.flag70_BN{ background-position: 0 -950px; width: 70px; height: 47px; } 
+.flag70_BO{ background-position: 0 -1000px; width: 70px; height: 47px; } 
+.flag70_BR{ background-position: 0 -1050px; width: 70px; height: 47px; } 
+.flag70_BS{ background-position: 0 -1100px; width: 70px; height: 47px; } 
+.flag70_BT{ background-position: 0 -1150px; width: 70px; height: 47px; } 
+.flag70_BW{ background-position: 0 -1200px; width: 70px; height: 47px; } 
+.flag70_BY{ background-position: 0 -1250px; width: 70px; height: 47px; } 
+.flag70_BZ{ background-position: 0 -1300px; width: 70px; height: 47px; } 
+.flag70_CA{ background-position: 0 -1350px; width: 70px; height: 47px; } 
+.flag70_CD{ background-position: 0 -1400px; width: 70px; height: 47px; } 
+.flag70_CF{ background-position: 0 -1450px; width: 70px; height: 47px; } 
+.flag70_CG{ background-position: 0 -1500px; width: 70px; height: 47px; } 
+.flag70_CH{ background-position: 0 -1550px; width: 70px; height: 47px; } 
+.flag70_CI{ background-position: 0 -1600px; width: 70px; height: 47px; } 
+.flag70_CL{ background-position: 0 -1650px; width: 70px; height: 47px; } 
+.flag70_CM{ background-position: 0 -1700px; width: 70px; height: 47px; } 
+.flag70_CN{ background-position: 0 -1750px; width: 70px; height: 47px; } 
+.flag70_CO{ background-position: 0 -1800px; width: 70px; height: 47px; } 
+.flag70_CR{ background-position: 0 -1850px; width: 70px; height: 47px; } 
+.flag70_CU{ background-position: 0 -1900px; width: 70px; height: 47px; } 
+.flag70_CV{ background-position: 0 -1950px; width: 70px; height: 47px; } 
+.flag70_CY{ background-position: -80px 0; width: 70px; height: 47px; } 
+.flag70_CZ{ background-position: -80px -50px; width: 70px; height: 47px; } 
+.flag70_DE{ background-position: -80px -100px; width: 70px; height: 47px; } 
+.flag70_DJ{ background-position: -80px -150px; width: 70px; height: 47px; } 
+.flag70_DK{ background-position: -80px -200px; width: 70px; height: 47px; } 
+.flag70_DM{ background-position: -80px -250px; width: 70px; height: 47px; } 
+.flag70_DO{ background-position: -80px -300px; width: 70px; height: 47px; } 
+.flag70_DZ{ background-position: -80px -350px; width: 70px; height: 47px; } 
+.flag70_EC{ background-position: -80px -400px; width: 70px; height: 47px; } 
+.flag70_EE{ background-position: -80px -450px; width: 70px; height: 47px; } 
+.flag70_EG{ background-position: -80px -500px; width: 70px; height: 47px; } 
+.flag70_ER{ background-position: -80px -550px; width: 70px; height: 47px; } 
+.flag70_ES{ background-position: -80px -600px; width: 70px; height: 47px; } 
+.flag70_ET{ background-position: -80px -650px; width: 70px; height: 47px; } 
+.flag70_FI{ background-position: -80px -700px; width: 70px; height: 47px; } 
+.flag70_FJ{ background-position: -80px -750px; width: 70px; height: 47px; } 
+.flag70_FM{ background-position: -80px -800px; width: 70px; height: 47px; } 
+.flag70_FR{ background-position: -80px -850px; width: 70px; height: 47px; } 
+.flag70_GA{ background-position: -80px -900px; width: 70px; height: 47px; } 
+.flag70_GB{ background-position: -80px -950px; width: 70px; height: 47px; } 
+.flag70_GD{ background-position: -80px -1000px; width: 70px; height: 47px; } 
+.flag70_GE{ background-position: -80px -1050px; width: 70px; height: 47px; } 
+.flag70_GH{ background-position: -80px -1100px; width: 70px; height: 47px; } 
+.flag70_GM{ background-position: -80px -1150px; width: 70px; height: 47px; } 
+.flag70_GN{ background-position: -80px -1200px; width: 70px; height: 47px; } 
+.flag70_GQ{ background-position: -80px -1250px; width: 70px; height: 47px; } 
+.flag70_GR{ background-position: -80px -1300px; width: 70px; height: 47px; } 
+.flag70_GT{ background-position: -80px -1350px; width: 70px; height: 47px; } 
+.flag70_GW{ background-position: -80px -1400px; width: 70px; height: 47px; } 
+.flag70_GY{ background-position: -80px -1450px; width: 70px; height: 47px; } 
+.flag70_HN{ background-position: -80px -1500px; width: 70px; height: 47px; } 
+.flag70_HR{ background-position: -80px -1550px; width: 70px; height: 47px; } 
+.flag70_HT{ background-position: -80px -1600px; width: 70px; height: 47px; } 
+.flag70_HU{ background-position: -80px -1650px; width: 70px; height: 47px; } 
+.flag70_ID{ background-position: -80px -1700px; width: 70px; height: 47px; } 
+.flag70_IE{ background-position: -80px -1750px; width: 70px; height: 47px; } 
+.flag70_IL{ background-position: -80px -1800px; width: 70px; height: 47px; } 
+.flag70_IN{ background-position: -80px -1850px; width: 70px; height: 47px; } 
+.flag70_IQ{ background-position: -80px -1900px; width: 70px; height: 47px; } 
+.flag70_IR{ background-position: -80px -1950px; width: 70px; height: 47px; } 
+.flag70_IS{ background-position: -160px 0; width: 70px; height: 47px; } 
+.flag70_IT{ background-position: -160px -50px; width: 70px; height: 47px; } 
+.flag70_JM{ background-position: -160px -100px; width: 70px; height: 47px; } 
+.flag70_JO{ background-position: -160px -150px; width: 70px; height: 47px; } 
+.flag70_JP{ background-position: -160px -200px; width: 70px; height: 47px; } 
+.flag70_KE{ background-position: -160px -250px; width: 70px; height: 47px; } 
+.flag70_KG{ background-position: -160px -300px; width: 70px; height: 47px; } 
+.flag70_KH{ background-position: -160px -350px; width: 70px; height: 47px; } 
+.flag70_KI{ background-position: -160px -400px; width: 70px; height: 47px; } 
+.flag70_KM{ background-position: -160px -450px; width: 70px; height: 47px; } 
+.flag70_KN{ background-position: -160px -500px; width: 70px; height: 47px; } 
+.flag70_KO{ background-position: -160px -550px; width: 70px; height: 47px; } 
+.flag70_KP{ background-position: -160px -600px; width: 70px; height: 47px; } 
+.flag70_KR{ background-position: -160px -650px; width: 70px; height: 47px; } 
+.flag70_KW{ background-position: -160px -700px; width: 70px; height: 47px; } 
+.flag70_KZ{ background-position: -160px -750px; width: 70px; height: 47px; } 
+.flag70_Kosovo{ background-position: -160px -800px; width: 70px; height: 47px; } 
+.flag70_LA{ background-position: -160px -850px; width: 70px; height: 47px; } 
+.flag70_LB{ background-position: -160px -900px; width: 70px; height: 47px; } 
+.flag70_LC{ background-position: -160px -950px; width: 70px; height: 47px; } 
+.flag70_LI{ background-position: -160px -1000px; width: 70px; height: 47px; } 
+.flag70_LK{ background-position: -160px -1050px; width: 70px; height: 47px; } 
+.flag70_LR{ background-position: -160px -1100px; width: 70px; height: 47px; } 
+.flag70_LS{ background-position: -160px -1150px; width: 70px; height: 47px; } 
+.flag70_LT{ background-position: -160px -1200px; width: 70px; height: 47px; } 
+.flag70_LU{ background-position: -160px -1250px; width: 70px; height: 47px; } 
+.flag70_LV{ background-position: -160px -1300px; width: 70px; height: 47px; } 
+.flag70_LY{ background-position: -160px -1350px; width: 70px; height: 47px; } 
+.flag70_MA{ background-position: -160px -1400px; width: 70px; height: 47px; } 
+.flag70_MC{ background-position: -160px -1450px; width: 70px; height: 47px; } 
+.flag70_MD{ background-position: -160px -1500px; width: 70px; height: 47px; } 
+.flag70_ME{ background-position: -160px -1550px; width: 70px; height: 47px; } 
+.flag70_MG{ background-position: -160px -1600px; width: 70px; height: 47px; } 
+.flag70_MH{ background-position: -160px -1650px; width: 70px; height: 47px; } 
+.flag70_MK{ background-position: -160px -1700px; width: 70px; height: 47px; } 
+.flag70_ML{ background-position: -160px -1750px; width: 70px; height: 47px; } 
+.flag70_MM{ background-position: -160px -1800px; width: 70px; height: 47px; } 
+.flag70_MN{ background-position: -160px -1850px; width: 70px; height: 47px; } 
+.flag70_MR{ background-position: -160px -1900px; width: 70px; height: 47px; } 
+.flag70_MT{ background-position: -160px -1950px; width: 70px; height: 47px; } 
+.flag70_MU{ background-position: -240px 0; width: 70px; height: 47px; } 
+.flag70_MV{ background-position: -240px -50px; width: 70px; height: 47px; } 
+.flag70_MW{ background-position: -240px -100px; width: 70px; height: 47px; } 
+.flag70_MX{ background-position: -240px -150px; width: 70px; height: 47px; } 
+.flag70_MY{ background-position: -240px -200px; width: 70px; height: 47px; } 
+.flag70_MZ{ background-position: -240px -250px; width: 70px; height: 47px; } 
+.flag70_NA{ background-position: -240px -300px; width: 70px; height: 47px; } 
+.flag70_NE{ background-position: -240px -350px; width: 70px; height: 47px; } 
+.flag70_NG{ background-position: -240px -400px; width: 70px; height: 47px; } 
+.flag70_NI{ background-position: -240px -450px; width: 70px; height: 47px; } 
+.flag70_NL{ background-position: -240px -500px; width: 70px; height: 47px; } 
+.flag70_NO{ background-position: -240px -550px; width: 70px; height: 47px; } 
+.flag70_NP{ background-position: -240px -600px; width: 70px; height: 47px; } 
+.flag70_NR{ background-position: -240px -650px; width: 70px; height: 47px; } 
+.flag70_NZ{ background-position: -240px -700px; width: 70px; height: 47px; } 
+.flag70_OM{ background-position: -240px -750px; width: 70px; height: 47px; } 
+.flag70_PA{ background-position: -240px -800px; width: 70px; height: 47px; } 
+.flag70_PE{ background-position: -240px -850px; width: 70px; height: 47px; } 
+.flag70_PG{ background-position: -240px -900px; width: 70px; height: 47px; } 
+.flag70_PH{ background-position: -240px -950px; width: 70px; height: 47px; } 
+.flag70_PK{ background-position: -240px -1000px; width: 70px; height: 47px; } 
+.flag70_PL{ background-position: -240px -1050px; width: 70px; height: 47px; } 
+.flag70_PT{ background-position: -240px -1100px; width: 70px; height: 47px; } 
+.flag70_PW{ background-position: -240px -1150px; width: 70px; height: 47px; } 
+.flag70_PY{ background-position: -240px -1200px; width: 70px; height: 47px; } 
+.flag70_QA{ background-position: -240px -1250px; width: 70px; height: 47px; } 
+.flag70_RO{ background-position: -240px -1300px; width: 70px; height: 47px; } 
+.flag70_RS{ background-position: -240px -1350px; width: 70px; height: 47px; } 
+.flag70_RU{ background-position: -240px -1400px; width: 70px; height: 47px; } 
+.flag70_RW{ background-position: -240px -1450px; width: 70px; height: 47px; } 
+.flag70_SA{ background-position: -240px -1500px; width: 70px; height: 47px; } 
+.flag70_SB{ background-position: -240px -1550px; width: 70px; height: 47px; } 
+.flag70_SC{ background-position: -240px -1600px; width: 70px; height: 47px; } 
+.flag70_SD{ background-position: -240px -1650px; width: 70px; height: 47px; } 
+.flag70_SE{ background-position: -240px -1700px; width: 70px; height: 47px; } 
+.flag70_SG{ background-position: -240px -1750px; width: 70px; height: 47px; } 
+.flag70_SI{ background-position: -240px -1800px; width: 70px; height: 47px; } 
+.flag70_SK{ background-position: -240px -1850px; width: 70px; height: 47px; } 
+.flag70_SL{ background-position: -240px -1900px; width: 70px; height: 47px; } 
+.flag70_SM{ background-position: -240px -1950px; width: 70px; height: 47px; } 
+.flag70_SN{ background-position: -320px 0; width: 70px; height: 47px; } 
+.flag70_SO{ background-position: -320px -50px; width: 70px; height: 47px; } 
+.flag70_SR{ background-position: -320px -100px; width: 70px; height: 47px; } 
+.flag70_SS{ background-position: -320px -150px; width: 70px; height: 47px; } 
+.flag70_ST{ background-position: -320px -200px; width: 70px; height: 47px; } 
+.flag70_SV{ background-position: -320px -250px; width: 70px; height: 47px; } 
+.flag70_SY{ background-position: -320px -300px; width: 70px; height: 47px; } 
+.flag70_SZ{ background-position: -320px -350px; width: 70px; height: 47px; } 
+.flag70_TD{ background-position: -320px -400px; width: 70px; height: 47px; } 
+.flag70_TG{ background-position: -320px -450px; width: 70px; height: 47px; } 
+.flag70_TH{ background-position: -320px -500px; width: 70px; height: 47px; } 
+.flag70_TJ{ background-position: -320px -550px; width: 70px; height: 47px; } 
+.flag70_TL{ background-position: -320px -600px; width: 70px; height: 47px; } 
+.flag70_TM{ background-position: -320px -650px; width: 70px; height: 47px; } 
+.flag70_TN{ background-position: -320px -700px; width: 70px; height: 47px; } 
+.flag70_TO{ background-position: -320px -750px; width: 70px; height: 47px; } 
+.flag70_TR{ background-position: -320px -800px; width: 70px; height: 47px; } 
+.flag70_TT{ background-position: -320px -850px; width: 70px; height: 47px; } 
+.flag70_TV{ background-position: -320px -900px; width: 70px; height: 47px; } 
+.flag70_TW{ background-position: -320px -950px; width: 70px; height: 47px; } 
+.flag70_TZ{ background-position: -320px -1000px; width: 70px; height: 47px; } 
+.flag70_UA{ background-position: -320px -1050px; width: 70px; height: 47px; } 
+.flag70_UG{ background-position: -320px -1100px; width: 70px; height: 47px; } 
+.flag70_US{ background-position: -320px -1150px; width: 70px; height: 47px; } 
+.flag70_UY{ background-position: -320px -1200px; width: 70px; height: 47px; } 
+.flag70_UZ{ background-position: -320px -1250px; width: 70px; height: 47px; } 
+.flag70_VA{ background-position: -320px -1300px; width: 70px; height: 47px; } 
+.flag70_VC{ background-position: -320px -1350px; width: 70px; height: 47px; } 
+.flag70_VE{ background-position: -320px -1400px; width: 70px; height: 47px; } 
+.flag70_VN{ background-position: -320px -1450px; width: 70px; height: 47px; } 
+.flag70_VU{ background-position: -320px -1500px; width: 70px; height: 47px; } 
+.flag70_WS{ background-position: -320px -1550px; width: 70px; height: 47px; } 
+.flag70_YE{ background-position: -320px -1600px; width: 70px; height: 47px; } 
+.flag70_ZA{ background-position: -320px -1650px; width: 70px; height: 47px; } 
+.flag70_ZM{ background-position: -320px -1700px; width: 70px; height: 47px; } 
+.flag70_ZW{ background-position: -320px -1750px; width: 70px; height: 47px; } 
